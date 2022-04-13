@@ -1,0 +1,34 @@
+---
+title: "phrag"
+author: "ZMRS"
+date: "4/13/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Add library
+```{r}
+library(readr)
+```
+
+
+## Add data
+
+```{r}
+rawdata <- read_csv("data/rawdata.csv", col_types = cols(TreatmentPhragmites = col_factor(levels = c("Present", 
+    "Absent")), Vicia_tetrasperma = col_double(), 
+    Prunus_serotina = col_double(), Lepidium_didymum = col_double(), 
+    Valerianella_locusta = col_double()))
+View(rawdata)
+```
+
+
+## Diversity index
+
+```{r}
+
+```
+
