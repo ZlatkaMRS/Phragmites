@@ -29,6 +29,8 @@ View(rawdata)
 ## Diversity index
 
 ```{r}
-
+diversity(rawdata, index = "shannon", MARGIN = 1, base = exp(1))
+fisher.alpha(rawdata, MARGIN = 1)
+specnumber(rawdata, MARGIN = 1)
 ```
 
