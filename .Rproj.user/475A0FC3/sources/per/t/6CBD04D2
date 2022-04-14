@@ -3,7 +3,7 @@
     "path": "~/GitHub/Phragmites/phrag.Rmd",
     "project_path": "phrag.Rmd",
     "type": "r_markdown",
-    "hash": "4153649264",
+    "hash": "2072092107",
     "contents": "",
     "dirty": false,
     "created": 1649870523687.0,
@@ -13,15 +13,16 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "13,14",
-        "scrollLine": "8"
+        "cursorPosition": "36,8",
+        "scrollLine": "28",
+        "last_setup_crc32": "7664B846bb338d19"
     },
     "folds": "",
-    "lastKnownWriteTime": 1649871634,
+    "lastKnownWriteTime": 1649877338,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1649871634330,
+    "last_content_update": 1649877338107,
     "read_only": false,
     "read_only_alternatives": []
 }

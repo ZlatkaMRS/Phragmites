@@ -1,0 +1,1 @@
+"0","phragdata <- subset(rawdata,select=-c(7,8))"
