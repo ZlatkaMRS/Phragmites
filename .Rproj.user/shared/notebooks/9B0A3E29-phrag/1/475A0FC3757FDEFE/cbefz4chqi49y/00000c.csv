@@ -1,0 +1,4 @@
+"0","diversity(spp_sub, index = ""shannon"", MARGIN = 2, base = exp(1))"
+"2","Error in diversity(spp_sub, index = ""shannon"", MARGIN = 2, base = exp(1)) : 
+  input data must be numeric
+"

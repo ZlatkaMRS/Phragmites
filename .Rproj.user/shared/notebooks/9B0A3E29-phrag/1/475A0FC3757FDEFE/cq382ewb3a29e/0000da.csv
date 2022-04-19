@@ -1,0 +1,5 @@
+"0","spp_split <- split(spp_sub,spp_sub$Code)"
+"0","z <-lapply(spp_split, function(x){"
+"0","  x$div<-diversity(x[,2:71], index = ""shannon"")"
+"0","  return(x)"
+"0","})"

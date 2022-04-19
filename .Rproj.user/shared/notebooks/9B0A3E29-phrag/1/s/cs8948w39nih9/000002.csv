@@ -1,5 +1,0 @@
-"0","rawdata <- read_csv(""data/rawdata.csv"", col_types = cols(TreatmentPhragmites = col_factor(levels = c(""Present"", "
-"0","    ""Absent"")), Vicia_tetrasperma = col_double(), "
-"0","    Prunus_serotina = col_double(), Lepidium_didymum = col_double(), "
-"0","    Valerianella_locusta = col_double()))"
-"0","View(rawdata)"

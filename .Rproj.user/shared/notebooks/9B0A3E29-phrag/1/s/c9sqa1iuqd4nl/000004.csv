@@ -1,0 +1,2 @@
+"0","phragdata <- subset(rawdata,select=-c(1,2,3,4,5,6,7,8,9))"
+"0","spp_sub <- subset(spp,select=-c(1,2,3,4,5))"

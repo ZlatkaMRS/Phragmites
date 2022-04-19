@@ -1,0 +1,7 @@
+"0","rownames(phragg_mean) <- c(""AbsentBCAT1"", ""AbsentBCAT2"",""AbsentBCAT3"",""AbsentBCAT4"",""AbsentBCAT5"",""AbsentBCAT6"",""AbsentBCBT1"",""AbsentBCBT2"",""AbsentBCBT3"",""AbsentBCBT4"",""AbsentBCBT5"",""AbsentBCBT6"",""AbsentOPST1"",""AbsentOPST2"",""AbsentOPST3"",""AbsentOPST4"",""AbsentOPST5"",""AbsentOPST6"",""PresentBAMT1"",""PresentBAMT2"",""PresentBAMT3"",""PresentBAMT4"",""PresentBAMT5"",""PresentBAMT6"",""PresentDCET1"",""PresentDCET2"",""PresentDCET3"",""PresentDCET4"",""PresentDCET5"",""PresentDCET6"",""PresentLPT1"",""PresentLPT2"",""PresentLPT3"",""PresentLPT4"",""PresentLPT5"",""PresentLPT6"")"
+"0","rownames(spp) <- c(""AbsentBCAT1"", ""AbsentBCAT2"",""AbsentBCAT3"",""AbsentBCAT4"",""AbsentBCAT5"",""AbsentBCAT6"",""AbsentBCBT1"",""AbsentBCBT2"",""AbsentBCBT3"",""AbsentBCBT4"",""AbsentBCBT5"",""AbsentBCBT6"",""AbsentOPST1"",""AbsentOPST2"",""AbsentOPST3"",""AbsentOPST4"",""AbsentOPST5"",""AbsentOPST6"",""PresentBAMT1"",""PresentBAMT2"",""PresentBAMT3"",""PresentBAMT4"",""PresentBAMT5"",""PresentBAMT6"",""PresentDCET1"",""PresentDCET2"",""PresentDCET3"",""PresentDCET4"",""PresentDCET5"",""PresentDCET6"",""PresentLPT1"",""PresentLPT2"",""PresentLPT3"",""PresentLPT4"",""PresentLPT5"",""PresentLPT6"")"
+"2","Warning:"
+"2"," Setting row names on a tibble is deprecated.
+"
+"0","ph_mn <- subset(phragg_mean, select = -c(1,19))"
+"0","View(ph_mn)"

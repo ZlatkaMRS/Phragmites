@@ -1,4 +1,4 @@
-"0","boxplot(rawdata$Phragmites,rawdata$TreatmentPhragmites)"
+"0","boxplot(spp)"
 "2","Error in x[floor(d)] + x[ceiling(d)] : 
   non-numeric argument to binary operator
 "

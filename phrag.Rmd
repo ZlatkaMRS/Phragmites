@@ -21,40 +21,59 @@ library(tidyverse)
 ## Add data
 
 ```{r}
+spp <- read_csv("data/spp.csv")
 rawdata <- read_csv("data/rawdata.csv", col_types = cols(meters = col_character()))
-View(rawdata)
 ```
 
 
-##
+##SUBSET for generate the diversity index values per transect
 
 ```{r}
-phragdata <- subset(rawdata,select=-c(7,8))
-```
-
-## ANOVA
-```{r}
-ggplot2()
+phragdata <- subset(rawdata,select=-c(1,2,3,4,5,6,7,8,9))
+spp_sub <- subset(spp,select=-c(1,2,3,4,5))
 ```
 
 
-## Plot by sites
+##Agregate
+
 ```{r}
-boxplot(rawdata$Phragmites,rawdata$TreatmentPhragmites)
+phragg_mean <-aggregate(phragdata,by=list(rawdata$Code), FUN = mean)
 ```
 
 
-## Plot total by sites
+## Rownames
 
 ```{r}
-plot(betadiver(rawdata))
+rownames(phragg_mean) <- c("AbsentBCAT1", "AbsentBCAT2","AbsentBCAT3","AbsentBCAT4","AbsentBCAT5","AbsentBCAT6","AbsentBCBT1","AbsentBCBT2","AbsentBCBT3","AbsentBCBT4","AbsentBCBT5","AbsentBCBT6","AbsentOPST1","AbsentOPST2","AbsentOPST3","AbsentOPST4","AbsentOPST5","AbsentOPST6","PresentBAMT1","PresentBAMT2","PresentBAMT3","PresentBAMT4","PresentBAMT5","PresentBAMT6","PresentDCET1","PresentDCET2","PresentDCET3","PresentDCET4","PresentDCET5","PresentDCET6","PresentLPT1","PresentLPT2","PresentLPT3","PresentLPT4","PresentLPT5","PresentLPT6")
+rownames(spp) <- c("AbsentBCAT1", "AbsentBCAT2","AbsentBCAT3","AbsentBCAT4","AbsentBCAT5","AbsentBCAT6","AbsentBCBT1","AbsentBCBT2","AbsentBCBT3","AbsentBCBT4","AbsentBCBT5","AbsentBCBT6","AbsentOPST1","AbsentOPST2","AbsentOPST3","AbsentOPST4","AbsentOPST5","AbsentOPST6","PresentBAMT1","PresentBAMT2","PresentBAMT3","PresentBAMT4","PresentBAMT5","PresentBAMT6","PresentDCET1","PresentDCET2","PresentDCET3","PresentDCET4","PresentDCET5","PresentDCET6","PresentLPT1","PresentLPT2","PresentLPT3","PresentLPT4","PresentLPT5","PresentLPT6")
+ph_mn <- subset(phragg_mean, select = -c(1,19))
+View(ph_mn)
 ```
 
 ## Diversity index
 
 ```{r}
-#diversity(phragdata$Site$, index = "shannon", MARGIN = 2, base = exp(1))
-#fisher.alpha(rawdata, MARGIN = 2)
-#specnumber(rawdata, MARGIN = 2)
+specnumber(ph_mn, MARGIN = 1)
+diversity(ph_mn, index = "shannon", MARGIN = 1, base = exp(1))
 ```
+## Plot by Treatment
+```{r}
+Treat_sp_box <- boxplot(specnumber(ph_mn)~ spp$TreatmentPhragmites)
+Site_sp_box <- boxplot(specnumber(ph_mn)~ spp$Sites)
+```
+
+## ANOVA
+```{r}
+
+```
+
+
+
+
+## Plot total by sites
+
+```{r}
+plot(betadiver(ph_mn))
+```
+
 

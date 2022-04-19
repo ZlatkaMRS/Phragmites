@@ -1,0 +1,1 @@
+"0","phragg_mean <-aggregate(phragdata,by=list(rawdata$Code), FUN = mean)"
