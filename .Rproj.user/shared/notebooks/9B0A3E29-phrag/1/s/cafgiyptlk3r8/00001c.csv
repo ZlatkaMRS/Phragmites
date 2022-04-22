@@ -1,0 +1,4 @@
+"0","spp_ph1$TreatmentPhragmites <- factor(spp_ph1$TreatmentPhragmites, c(""Absent"", ""Present""))"
+"0",""
+"0","ggplot(spp_ph1, aes(x=reorder(Sites,numberspp), y=numberspp, fill=TreatmentPhragmites)) +"
+"0","         geom_boxplot()"

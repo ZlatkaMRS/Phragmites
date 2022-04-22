@@ -1,0 +1,7 @@
+"0","#Treat_sp_box <- boxplot(specnumber(ph_mn)~ spp$TreatmentPhragmites)"
+"0","#Site_sp_box <- boxplot(specnumber(ph_mn)~ spp$Sites,"
+"0","                       #col=terrain.colors(2))"
+"0","# Add a legend"
+"0","#legend(""topright"", legend = c(""Present"", ""Absent""), "
+"0"," #      col=terrain.colors(2),"
+"0","  #     pch = 15, bty = ""n"", pt.cex = 3, cex = 1.2,  horiz = F, inset = c(0.1, 0.1))"

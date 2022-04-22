@@ -15,6 +15,8 @@ library(readr)
 library(vegan)
 library(ggplot2)
 library(tidyverse)
+library(devtools)
+library(ggfortify)
 ```
 
 
@@ -53,21 +55,32 @@ View(ph_mn)
 ## Diversity index
 
 ```{r}
-specnumber(ph_mn, MARGIN = 1)
-diversity(ph_mn, index = "shannon", MARGIN = 1, base = exp(1))
-```
-## Plot by Treatment
-```{r}
-Treat_sp_box <- boxplot(specnumber(ph_mn)~ spp$TreatmentPhragmites)
-Site_sp_box <- boxplot(specnumber(ph_mn)~ spp$Sites)
+numberspp <- specnumber(ph_mn, MARGIN = 1)
+Shannon <- diversity(ph_mn, index = "shannon", MARGIN = 1, base = exp(1))
+spp_ph.div <- cbind(ph_mn,Shannon)
 ```
 
+
+## Preparations for the ANOVA
+```{r}
+div_spp <- subset(spp_ph.div,select=c(66))
+tm_spp <- subset(spp,select=c(1,2,3,4,5))
+spp_ph1 <- cbind(tm_spp,div_spp,numberspp)
+```
 ## ANOVA
+
 ```{r}
+div_aov <- aov(Shannon ~ TreatmentPhragmites + Sites,
+  data = spp_ph1
+)
 
+summary(div_aov)
+
+rich_aov <- aov(numberspp ~ TreatmentPhragmites + Sites,
+  data = spp_ph1
+)
+summary(rich_aov)
 ```
-
-
 
 
 ## Plot total by sites
@@ -76,4 +89,26 @@ Site_sp_box <- boxplot(specnumber(ph_mn)~ spp$Sites)
 plot(betadiver(ph_mn))
 ```
 
+## Plot by Treatment
+```{r}
+spp_ph1$TreatmentPhragmites <- factor(spp_ph1$TreatmentPhragmites, c("Absent", "Present"))
+
+ggplot(spp_ph1, aes(x=reorder(Sites,numberspp), y=numberspp, fill=TreatmentPhragmites), ) +
+         geom_boxplot() +
+  xlab("Sites") + ylab("Species Richness")
+
+ggplot(spp_ph1, aes(x=TreatmentPhragmites, y=numberspp, fill=TreatmentPhragmites)) +
+        geom_boxplot() +
+  xlab("Treatment") + ylab("Species Richness")
+
+```
+
+## PCA
+
+```{r}
+pca_spp <- prcomp(ph_mn, center = TRUE, scale. = TRUE)
+summary((pca_spp))
+autoplot(pca_spp, data = spp_ph1, colour = 'Shannon', shape = 'TreatmentPhragmites')
+autoplot(pca_spp, data = spp_ph1, colour = 'Sites', shape = 'TreatmentPhragmites')
+```
 

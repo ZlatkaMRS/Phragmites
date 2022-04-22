@@ -1,0 +1,37 @@
+"TreatmentPhragmites","Site","Sites","Transect","Code","Shannon","numberspp"
+"Absent","Brock Commons A","BCA","t1","AbsentBCAT1",0.855749307668354,5
+"Absent","Brock Commons A","BCA","t2","AbsentBCAT2",1.2427057185644,7
+"Absent","Brock Commons A","BCA","t3","AbsentBCAT3",1.4062608534266,7
+"Absent","Brock Commons A","BCA","t4","AbsentBCAT4",2.27157413386998,16
+"Absent","Brock Commons A","BCA","t5","AbsentBCAT5",1.74381861556807,14
+"Absent","Brock Commons A","BCA","t6","AbsentBCAT6",2.37298732300265,15
+"Absent","Brock Commons B","BCB","t1","AbsentBCBT1",1.48126462218142,8
+"Absent","Brock Commons B","BCB","t2","AbsentBCBT2",2.00111582630362,9
+"Absent","Brock Commons B","BCB","t3","AbsentBCBT3",2.37132848498747,14
+"Absent","Brock Commons B","BCB","t4","AbsentBCBT4",1.53976998732436,7
+"Absent","Brock Commons B","BCB","t5","AbsentBCBT5",0.962274000998967,4
+"Absent","Brock Commons B","BCB","t6","AbsentBCBT6",1.69685229430429,9
+"Absent","Oceanography & Physical Sciences","OPS","t1","AbsentOPST1",1.17153349177173,5
+"Absent","Oceanography & Physical Sciences","OPS","t2","AbsentOPST2",0.945215656884827,7
+"Absent","Oceanography & Physical Sciences","OPS","t3","AbsentOPST3",1.9270162744033,11
+"Absent","Oceanography & Physical Sciences","OPS","t4","AbsentOPST4",1.66498882151388,9
+"Absent","Oceanography & Physical Sciences","OPS","t5","AbsentOPST5",1.49411808472223,6
+"Absent","Oceanography & Physical Sciences","OPS","t6","AbsentOPST6",1.41101990899955,5
+"Present","BarryArtsMuseum","BAM","t1","PresentBAMT1",0.880409888700696,4
+"Present","BarryArtsMuseum","BAM","t2","PresentBAMT2",1.03644862722428,4
+"Present","BarryArtsMuseum","BAM","t3","PresentBAMT3",1.44699872118485,6
+"Present","BarryArtsMuseum","BAM","t4","PresentBAMT4",1.56513877693454,7
+"Present","BarryArtsMuseum","BAM","t5","PresentBAMT5",1.21228742409492,5
+"Present","BarryArtsMuseum","BAM","t6","PresentBAMT6",0.905318190419939,3
+"Present","Darden College of Education","DCE","t1","PresentDCET1",0.725200133926659,4
+"Present","Darden College of Education","DCE","t2","PresentDCET2",1.26289501368392,4
+"Present","Darden College of Education","DCE","t3","PresentDCET3",0.710955263483997,3
+"Present","Darden College of Education","DCE","t4","PresentDCET4",0.751078472857727,4
+"Present","Darden College of Education","DCE","t5","PresentDCET5",1.35504574320649,6
+"Present","Darden College of Education","DCE","t6","PresentDCET6",1.34248042305393,4
+"Present","LambertsPoint","LP","t1","PresentLPT1",1.1052693395078,6
+"Present","LambertsPoint","LP","t2","PresentLPT2",0.75497247389516,6
+"Present","LambertsPoint","LP","t3","PresentLPT3",1.3284679262266,7
+"Present","LambertsPoint","LP","t4","PresentLPT4",2.08835511721035,10
+"Present","LambertsPoint","LP","t5","PresentLPT5",1.43999302047963,10
+"Present","LambertsPoint","LP","t6","PresentLPT6",0.392180998159338,5

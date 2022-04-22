@@ -1,0 +1,3 @@
+"0","numberspp <- specnumber(ph_mn, MARGIN = 1)"
+"0","Shannon <- diversity(ph_mn, index = ""shannon"", MARGIN = 1, base = exp(1))"
+"0","spp_ph.div <- cbind(ph_mn,Shannon)"
