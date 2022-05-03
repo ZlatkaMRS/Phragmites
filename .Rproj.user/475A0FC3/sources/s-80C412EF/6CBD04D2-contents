@@ -108,7 +108,7 @@ ggplot(spp_ph1, aes(x=TreatmentPhragmites, y=numberspp, fill=TreatmentPhragmites
 ```{r}
 pca_spp <- prcomp(ph_mn, center = TRUE, scale. = TRUE)
 summary((pca_spp))
-autoplot(pca_spp, data = spp_ph1, colour = 'Shannon', shape = 'TreatmentPhragmites')
-autoplot(pca_spp, data = spp_ph1, colour = 'Sites', shape = 'TreatmentPhragmites')
+autoplot(pca_spp, data = spp_ph1, colour = 'Shannon', alpha = 0.75, shape = 'TreatmentPhragmites', size = 4)
+autoplot(pca_spp, data = spp_ph1, colour = 'Sites', alpha = 0.65, shape = 'TreatmentPhragmites', size = 3.5)
 ```
 
